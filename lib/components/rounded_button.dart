@@ -16,15 +16,9 @@ class RoundedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * 0.9,
       child: ElevatedButton(
-        child: Text(
-          text,
-          style: TextStyle(
-            color: textColor,
-          ),
-        ),
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           side: BorderSide(
@@ -32,6 +26,12 @@ class RoundedButton extends StatelessWidget {
             color: color,
           ),
           backgroundColor: color,
+        ),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: textColor,
+          ),
         ),
       ),
     );
