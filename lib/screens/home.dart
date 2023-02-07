@@ -1,3 +1,4 @@
+import 'package:em_audio/components/carrousel_login.dart';
 import 'package:em_audio/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 

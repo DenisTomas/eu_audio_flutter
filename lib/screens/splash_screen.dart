@@ -1,4 +1,5 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:em_audio/components/assets_images.dart';
 import 'package:em_audio/screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +11,10 @@ class SplashScreen extends StatelessWidget {
     return AnimatedSplashScreen(
       splash: Column(
         children: [
-          Image.asset('assets/logo.png'),
+          Image.asset(splashScreenImg),
         ],
       ),
+      splashTransition: SplashTransition.scaleTransition,
       backgroundColor: Colors.black12,
       nextScreen: const Home(),
       splashIconSize: 300,

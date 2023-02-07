@@ -1,4 +1,4 @@
-import 'package:em_audio/colors.dart';
+import 'package:em_audio/components/colors.dart';
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
