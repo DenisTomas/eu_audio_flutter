@@ -6,7 +6,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import '../components/rounded_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   get children => null;
 
@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          CarrouselLogin(),
+          const CarrouselLogin(),
           Row(
             children: <Widget>[
               Expanded(
@@ -29,30 +29,26 @@ class WelcomeScreen extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(
                           top: 8.0, bottom: 32.0, left: 16, right: 16),
-                      child: Text(
-                        'Aproveite seu tempo! \n Estude onde e quando quiser com acesso em áudio às principais matérias cobradas em concursos públicos e na OAB',
-                        style: TextStyle(
-                            color: Colors.orange,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center,
-                      ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 32.0),
-                      child: RoundedButton(
-                        text: 'CADASTRAR',
-                        color: kPrimaryColor,
-                        onPressed: () {},
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: RoundedButton(
-                        text: 'ENTRAR',
-                        color: kPrimaryLightColor,
-                        onPressed: () {},
-                      ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 150),
+                          child: RoundedButton(
+                            text: 'CADASTRAR',
+                            color: kPrimaryColor,
+                            onPressed: () {},
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RoundedButton(
+                            text: 'ENTRAR',
+                            color: kPrimaryLightColor,
+                            onPressed: () {},
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
