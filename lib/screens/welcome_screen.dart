@@ -19,38 +19,40 @@ class WelcomeScreen extends StatelessWidget {
           Row(
             children: <Widget>[
               Expanded(
-                child: Column(
-                  children: <Widget>[
-                    Image.asset(
-                      welcomeScreenImg,
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      color: kPrimaryColor,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(
-                          top: 8.0, bottom: 32.0, left: 16, right: 16),
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 150),
-                          child: RoundedButton(
-                            text: 'CADASTRAR',
-                            color: kPrimaryColor,
-                            onPressed: () {},
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset(
+                        welcomeScreenImg,
+                        height: MediaQuery.of(context).size.height * 0.5,
+                        color: kPrimaryColor,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(
+                            top: 8.0, bottom: 32.0, left: 16, right: 16),
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 150),
+                            child: RoundedButton(
+                              text: 'CADASTRAR',
+                              color: kPrimaryColor,
+                              onPressed: () {},
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: RoundedButton(
-                            text: 'ENTRAR',
-                            color: kPrimaryLightColor,
-                            onPressed: () {},
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: RoundedButton(
+                              text: 'ENTRAR',
+                              color: kPrimaryLightColor,
+                              onPressed: () {},
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
