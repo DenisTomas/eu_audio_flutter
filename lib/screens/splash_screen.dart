@@ -9,30 +9,28 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              color: kPrimaryColor,
-              gradient: LinearGradient(
-                  colors: [(Colors.black), (Colors.black87)],
-                  begin: Alignment.center,
-                  end: Alignment.center),
-            ),
-            child: AnimatedSplashScreen(
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(backgroundImg3), fit: BoxFit.cover),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
+          children: [
+            AnimatedSplashScreen(
               splash: Column(
                 children: [
-                  Image.asset(splashScreenImg),
+                  Image.asset(welcomeScreenImg),
                 ],
               ),
               splashTransition: SplashTransition.scaleTransition,
-              backgroundColor: Colors.black12,
+              backgroundColor: kFieldsAndButtonColor,
               nextScreen: const Home(),
               splashIconSize: 300,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -17,7 +17,6 @@ class EmAudio extends StatelessWidget {
       home: const SplashScreen(),
       theme: ThemeData(
         useMaterial3: true,
-        primaryColor: kPrimaryColor,
       ),
     );
   }

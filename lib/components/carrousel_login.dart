@@ -20,14 +20,16 @@ class _CarrouselLoginState extends State<CarrouselLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: CarouselSlider(
         options: CarouselOptions(
+          pauseAutoPlayOnTouch: true,
           enlargeCenterPage: true,
           height: MediaQuery.of(context).size.height,
           viewportFraction: 1.0,
-          autoPlay: true,
+          autoPlay: false,
         ),
-        items: [carrouselImg1, carrouselImg2, carrouselImg3].map((i) {
+        items: [backgroundImg, backgroundImg2, backgroundImg3].map((i) {
           return Builder(builder: (BuildContext context) {
             return Stack(
               children: <Widget>[
@@ -37,7 +39,7 @@ class _CarrouselLoginState extends State<CarrouselLogin> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                 ),
-                if (i == carrouselImg1)
+                if (i == backgroundImg)
                   Positioned(
                     bottom: MediaQuery.of(context).size.height / 2,
                     child: Text(
@@ -50,26 +52,26 @@ class _CarrouselLoginState extends State<CarrouselLogin> {
                           fontStyle: FontStyle.italic),
                     ),
                   ),
-                if (i == carrouselImg2)
+                if (i == backgroundImg2)
                   Positioned(
                     bottom: MediaQuery.of(context).size.height / 2,
                     child: Text(
                       imagesListText[1],
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
                           fontStyle: FontStyle.italic),
                     ),
                   ),
-                if (i == carrouselImg3)
+                if (i == backgroundImg3)
                   Positioned(
                     bottom: MediaQuery.of(context).size.height / 2,
                     child: Text(
                       imagesListText[2],
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
