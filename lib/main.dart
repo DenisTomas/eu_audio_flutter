@@ -1,4 +1,5 @@
 import 'package:em_audio/components/colors.dart';
+import 'package:em_audio/screens/initial_screen.dart';
 import 'package:em_audio/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class EmAudio extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Em Áudio',
-      home: const SplashScreen(),
+      home: const InitialScreen(),
       theme: ThemeData(
         useMaterial3: true,
       ),

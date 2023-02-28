@@ -11,7 +11,7 @@ class RoundedButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.color = kPrimaryColor,
-    this.textColor = Colors.white,
+    this.textColor = kPrimaryTextColor,
   }) : super(key: key);
 
   @override
@@ -21,9 +21,9 @@ class RoundedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          side: BorderSide(
-            width: 2.0,
-            color: color,
+          side: const BorderSide(
+            width: 1.0,
+            color: kPrimaryTextColor,
           ),
           backgroundColor: color,
         ),

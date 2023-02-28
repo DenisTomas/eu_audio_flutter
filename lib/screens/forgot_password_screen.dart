@@ -110,7 +110,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     TextSpan(
                       text: 'em sua caixa de entrada',
                       style: TextStyle(
-                          fontWeight: FontWeight.w100,
+                          fontWeight: FontWeight.w400,
                           color: Colors.grey,
                           fontSize: 12),
                     ),

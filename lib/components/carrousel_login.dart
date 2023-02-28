@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:em_audio/components/assets_images.dart';
+import 'package:em_audio/components/carrousel_text.dart';
 import 'package:em_audio/components/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -11,12 +12,6 @@ class CarrouselLogin extends StatefulWidget {
 }
 
 class _CarrouselLoginState extends State<CarrouselLogin> {
-  var imagesListText = [
-    'Bem-Vindo(a) acesse cursos completos...',
-    'Aproveite seu tempo',
-    'Praticidade e eficiência',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,11 +22,12 @@ class _CarrouselLoginState extends State<CarrouselLogin> {
           enlargeCenterPage: true,
           height: MediaQuery.of(context).size.height,
           viewportFraction: 1.0,
-          autoPlay: false,
+          autoPlay: true,
         ),
-        items: [backgroundImg, backgroundImg2, backgroundImg3].map((i) {
+        items: [carrouselImg1, carrouselImg2, carrouselImg3].map((i) {
           return Builder(builder: (BuildContext context) {
             return Stack(
+              alignment: Alignment.center,
               children: <Widget>[
                 Image.asset(
                   i,
@@ -39,43 +35,58 @@ class _CarrouselLoginState extends State<CarrouselLogin> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                 ),
-                if (i == backgroundImg)
-                  Positioned(
-                    bottom: MediaQuery.of(context).size.height / 2,
-                    child: Text(
-                      imagesListText[0],
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          fontStyle: FontStyle.italic),
+                if (i == carrouselImg1)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Positioned(
+                      width: MediaQuery.of(context).size.width,
+                      bottom: MediaQuery.of(context).size.height / 2,
+                      child: const Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Text(
+                          carrouselText1,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: kPrimaryColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FontStyle.italic),
+                        ),
+                      ),
                     ),
                   ),
-                if (i == backgroundImg2)
-                  Positioned(
-                    bottom: MediaQuery.of(context).size.height / 2,
-                    child: Text(
-                      imagesListText[1],
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          fontStyle: FontStyle.italic),
+                if (i == carrouselImg2)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Positioned(
+                      width: MediaQuery.of(context).size.width,
+                      bottom: MediaQuery.of(context).size.height / 2,
+                      child: const Text(
+                        carrouselText2,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: kPrimaryColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            fontStyle: FontStyle.italic),
+                      ),
                     ),
                   ),
-                if (i == backgroundImg3)
-                  Positioned(
-                    bottom: MediaQuery.of(context).size.height / 2,
-                    child: Text(
-                      imagesListText[2],
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          fontStyle: FontStyle.italic),
+                if (i == carrouselImg3)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Positioned(
+                      width: MediaQuery.of(context).size.width,
+                      bottom: MediaQuery.of(context).size.height / 2,
+                      child: const Text(
+                        carrouselText3,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: kPrimaryColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            fontStyle: FontStyle.normal),
+                      ),
                     ),
                   )
               ],
